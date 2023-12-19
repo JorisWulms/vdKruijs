@@ -1,0 +1,11 @@
+Week 10 2016:
+- includes/module_navTop.php toegevoegd
+- Optie bij admin/includes/admin_linkbuilding.php om top navigatie te selecteren
+- Optie bij admin/includes/admin_sitetree.php op topnavigatie te selecteren
+- Bij admin/includes/admin_navigatie.php de topnavigatie toegevoegd
+
+Week 11 2016:
+- Bug gefixed includes/module_navTop.php
+- Optie voor extraItem toegevoegd in admin/includes/admin_blogcat.php
+- Optie extraItem uitlezen toegevoegd aan includes/module_blog.php
+- Veld 'extraItem' in database tabel blog_cat_language toegevoegd

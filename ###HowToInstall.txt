@@ -1,0 +1,27 @@
+INSTALLATIE DYNBLOG
+
+1. Log in de op server d.m.v. de FTP gegevens.
+	- Hostnaam is vaak gewoon de url van de website, zonder 'http://www' ervoor. In enkele gevallen dien je een IP-adres in te vullen.
+	- Username en password worden aangeleverd.
+
+2. Sleep deze gehele map, exclusief alle bestanden waar '###' voor staat, naar de server.
+
+3. Update het bestand ###sitesmetdynblog.txt. Dit is om issues welke later bekend worden op alle sites te repareren.
+
+4. Ga naar de controlpanel van de website. Deze staat veelal in de mail met de hostinggegevens. Dit zijn linkjes met bijvoorbeeld ':2222' of '/cpanel' aan het einde.
+
+5. Zoek het onderdeel 'databases' en maak hier een nieuwe database en user aan. Noteer deze gegevens, deze heb je later nodig.
+
+6. Log in via 'phpmyadmin'. Als het goed is staat er in de controlpanel gewoon een link naar toe.
+
+7. Selecteer in phpmyadmin de database en klik op 'importeren'. Ga vervolgens via bladeren naar het bestand '###dynblogv3.sql' en klik dan op 'start'.
+
+8. Klik op het 'refresh' icoontje in phpmyadmin en ga vervolgens naar de tabel 'settings_general'. Pas hier het veld 'websiteurl' aan. Plak de gehele url van de website inclusief een '/' op het einde.
+
+9. Ga terug naar je FTP-programma en open de map 'includes'. Vervolgens open je het bestand 'prefs.php'. Pas hier de databasegegevens aan, sla het bestand op en upload deze.
+	- DB_HOSTNAME = localhost (tenzij anders aangegeven)
+	- DB_USERNAME = database gebruiker
+	- DB_PASSWORD = database password
+	- DB_DATABASE = database naam
+
+10. Als het goed is ben je nu klaar met het installeren van het systeem op een website. De rest kun je in principe via het admin paneel regelen van het systeem.

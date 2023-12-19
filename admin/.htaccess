@@ -1,0 +1,14 @@
+RewriteEngine on
+RewriteBase /admin/
+#check for ajax request
+RewriteCond %{HTTP:X-Requested-With} !=XMLHttpRequest
+RewriteCond %{HTTP:X-REQUESTED-WITH} !^(XMLHttpRequest)$
+#allow certain extansions
+RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.gif|\.jpeg|\.bmp|\.svg|\.woff2|\.ttf|\.webm)$
+RewriteCond %{REQUEST_URI}  !(\.css|\.js)$
+#check if its not index.php already, else it loops
+RewriteCond $1 !^(index\.php)$
+#allow filemanager and browse.php else we cant upload images in textblocks
+RewriteCond %{REQUEST_URI} !/(filemanager|browse)\.php
+#rewrite to index.php
+RewriteRule ^(.*)$ index.php [NC,QSA,R=301]
